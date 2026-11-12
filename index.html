@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jhovanna Choque Condori | Técnico Superior en Contabilidad</title>
+
+    <!-- Metadatos para que al compartir el link (WhatsApp, LinkedIn, etc.) salga tu nombre, descripción y foto -->
+    <meta
+      name="description"
+      content="Portafolio profesional de Jhovanna Choque Condori - Estudiante de 3er año de Técnico Superior en Contabilidad en la Universidad Católica Boliviana."
+    />
+    <meta
+      property="og:title"
+      content="Jhovanna Choque Condori | Portafolio Profesional"
+    />
+    <meta
+      property="og:description"
+      content="Estudiante de Técnico Superior en Contabilidad (3er año) - Universidad Católica Boliviana. Experiencia en registro contable y conocimientos en caja bancaria."
+    />
+    <meta property="og:image" content="foto.jpeg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Tipografía moderna de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================================================
+       VARIABLES Y ESTILOS GENERALES (CSS)
+       Paleta profesional inspirada en tu CV (Azul marino y acentos)
+       ========================================================= */
+      :root {
+        --primary: #16324f; /* Azul marino institucional */
+        --primary-light: #234b73;
+        --accent: #0ea5e9; /* Azul celeste profesional */
+        --bg-body: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border: #e2e8f0;
+        --success: #16a34a;
+        --error: #dc2626;
+        --shadow: 0 10px 25px -5px rgba(22, 50, 79, 0.08);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* =========================================================
+       BARRA DE NAVEGACIÓN (MENÚ RESPONSIVO)
+       ========================================================= */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+        z-index: 1000;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--primary);
+        letter-spacing: -0.5px;
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.75rem;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--text-main);
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      /* Botón hamburguesa para celular */
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+      }
+
+      .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+
+      /* =========================================================
+       SECCIÓN INICIO (HERO)
+       ========================================================= */
+      .hero {
+        padding: 8.5rem 0 5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-light) 100%
+        );
+        color: #ffffff;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .hero-photo-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hero-photo {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+        background-color: #234b73;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(14, 165, 233, 0.2);
+        color: #bae6fd;
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(186, 230, 253, 0.3);
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.15rem;
+        color: #e2e8f0;
+        margin-bottom: 1.75rem;
+        max-width: 600px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        border: none;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        background-color: #0284c7;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: #ffffff;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .btn-outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* =========================================================
+       SECCIONES GENERALES Y ANIMACIONES AL HACER SCROLL
+       ========================================================= */
+      section {
+        padding: 4.5rem 0;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 2px;
+        margin-top: 6px;
+      }
+
+      .section-desc {
+        color: var(--text-muted);
+        margin-bottom: 2.5rem;
+      }
+
+      /* Clase controlada por JavaScript para animación suave */
+      .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+        transition:
+          opacity 0.65s ease-out,
+          transform 0.65s ease-out;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =========================================================
+       SOBRE MÍ E IDIOMAS
+       ========================================================= */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+      }
+
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.75rem;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .lang-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .lang-item:last-child {
+        border-bottom: none;
+      }
+
+      .lang-badge {
+        background: #e0f2fe;
+        color: var(--primary);
+        padding: 0.25rem 0.7rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      /* =========================================================
+       EXPERIENCIA Y FORMACIÓN ACADÉMICA
+       ========================================================= */
+      .timeline-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .timeline-item {
+        border-left: 3px solid var(--accent);
+        padding-left: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-tag {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .timeline-item h4 {
+        font-size: 1.15rem;
+        color: var(--primary);
+        margin: 0.25rem 0;
+      }
+
+      .timeline-place {
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      /* =========================================================
+       HABILIDADES Y CONOCIMIENTOS ADICIONALES (SERVICIOS/ÁREAS)
+       ========================================================= */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .skill-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .skill-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: #e0f2fe;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .skill-card h3 {
+        font-size: 1.1rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+
+      /* =========================================================
+       CONTACTO Y FORMULARIO CON SUBIDA DE CV
+       ========================================================= */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .contact-icon {
+        width: 42px;
+        height: 42px;
+        background: var(--primary);
+        color: #ffffff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .form-group {
+        margin-bottom: 1.2rem;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        color: var(--primary);
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 0.95rem;
+        transition: border-color 0.2s;
+        background: #ffffff;
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+
+      .file-hint {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: 0.35rem;
+      }
+
+      .form-status {
+        margin-top: 1rem;
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: none;
+      }
+
+      .form-status.success {
+        display: block;
+        background-color: #dcfce7;
+        color: var(--success);
+        border: 1px solid #86efac;
+      }
+
+      .form-status.error {
+        display: block;
+        background-color: #fee2e2;
+        color: var(--error);
+        border: 1px solid #fca5a5;
+      }
+
+      .form-status.loading {
+        display: block;
+        background-color: #e0f2fe;
+        color: var(--primary);
+        border: 1px solid #7dd3fc;
+      }
+
+      /* =========================================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================================= */
+      footer {
+        background: var(--primary);
+        color: #cbd5e1;
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      /* =========================================================
+       DISEÑO RESPONSIVO PARA CELULARES
+       ========================================================= */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: flex;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: #ffffff;
+          flex-direction: column;
+          gap: 0;
+          border-bottom: 1px solid var(--border);
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.35s ease;
+        }
+
+        .nav-links.active {
+          max-height: 350px;
+        }
+
+        .nav-links li a {
+          display: block;
+          padding: 1rem 1.5rem;
+          border-top: 1px solid var(--border);
+        }
+
+        .hero {
+          padding: 7rem 0 3.5rem;
+          text-align: center;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+
+        .about-grid,
+        .timeline-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- =========================================================
+       1. BARRA DE NAVEGACIÓN
+       ========================================================= -->
+    <header>
+      <div class="container nav-container">
+        <a href="#inicio" class="logo">Jhovanna<span>.</span>Contabilidad</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#experiencia">Experiencia y formación</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#areas">Áreas de apoyo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- =========================================================
+       2. SECCIÓN INICIO (FOTO, NOMBRE Y FRASE)
+       ========================================================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-photo-wrapper">
+          <!-- Asegúrate de guardar tu foto como foto.jpg en la misma carpeta que este index.html -->
+          <img
+            src="foto.jpg"
+            alt="Foto de Jhovanna Choque Condori"
+            class="hero-photo"
+            onerror="
+              this.src =
+                'https://ui-avatars.com/api/?name=Jhovanna+Choque&background=0ea5e9&color=fff&size=240'
+            "
+          />
+        </div>
+        <div>
+          <span class="badge">Técnico Superior en Contabilidad · 3er Año</span>
+          <h1>Jhovanna Choque Condori</h1>
+          <p class="hero-subtitle">
+            Comprometida con el orden contable, la precisión administrativa y el
+            aprendizaje continuo en el área contable y financiera.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary">Contactarme</a>
+            <a href="#experiencia" class="btn btn-outline">Ver trayectoria</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       3. SECCIÓN SOBRE MÍ
+       ========================================================= -->
+    <section id="sobre-mi">
+      <div class="container reveal">
+        <h2 class="section-title">Sobre mí</h2>
+        <p class="section-desc">Perfil profesional e idiomas</p>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Perfil Profesional</h3>
+            <p>
+              Estudiante de <strong>Técnico Superior en Contabilidad</strong>,
+              actualmente cursando el
+              <strong>3er año en la Universidad Católica Boliviana</strong>.
+              Cuenta con experiencia como pasante (200 horas) y conocimientos
+              teóricos en manejo de caja bancaria, con disposición para seguir
+              aprendiendo en el área contable y financiera.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Idiomas</h3>
+            <div class="lang-item">
+              <span><strong>Español</strong></span>
+              <span class="lang-badge">Nativo</span>
+            </div>
+            <div class="lang-item">
+              <span><strong>Aymara</strong></span>
+              <span class="lang-badge">Hablado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       4. SECCIÓN EXPERIENCIA Y FORMACIÓN
+       ========================================================= -->
+    <section id="experiencia" style="background-color: #f1f5f9">
+      <div class="container reveal">
+        <h2 class="section-title">Experiencia y formación</h2>
+        <p class="section-desc">Trayectoria académica y práctica profesional</p>
+
+        <div class="timeline-grid">
+          <!-- Columna Experiencia -->
+          <div class="card">
+            <h3>Experiencia Laboral</h3>
+            <div class="timeline-item">
+              <span class="timeline-tag">200 horas de pasantía</span>
+              <h4>Pasante Contable</h4>
+              <p class="timeline-place">Área Contable y Administrativa</p>
+              <p>
+                Apoyo en tareas de registro contable y administrativo, aplicando
+                los conocimientos adquiridos durante la formación académica.
+              </p>
+            </div>
+          </div>
+
+          <!-- Columna Formación -->
+          <div class="card">
+            <h3>Formación Académica</h3>
+            <div class="timeline-item">
+              <span class="timeline-tag">3er año (en curso)</span>
+              <h4>Técnico Superior en Contabilidad</h4>
+              <p class="timeline-place">Universidad Católica Boliviana</p>
+              <p>
+                Formación integral en contabilidad, control financiero,
+                registros contables y gestión administrativa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       5. SECCIÓN HABILIDADES
+       ========================================================= -->
+    <section id="habilidades">
+      <div class="container reveal">
+        <h2 class="section-title">Habilidades</h2>
+        <p class="section-desc">Competencias técnicas y personales</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">01</div>
+            <h3>Registro y control contable</h3>
+            <p>
+              Capacidad para apoyar en la organización, clasificación y registro
+              ordenado de operaciones contables y documentación administrativa.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">02</div>
+            <h3>Trabajo en equipo</h3>
+            <p>
+              Colaboración efectiva con compañeros y supervisores para cumplir
+              los objetivos administrativos y contables en tiempo y forma.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">03</div>
+            <h3>Responsabilidad y puntualidad</h3>
+            <p>
+              Compromiso ético con las tareas asignadas, cumplimiento estricto
+              de horarios y disposición constante para seguir aprendiendo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       6. SECCIÓN SERVICIOS O ÁREAS DE CONOCIMIENTO
+       ========================================================= -->
+    <section id="areas" style="background-color: #f1f5f9">
+      <div class="container reveal">
+        <h2 class="section-title">Áreas de desempeño y conocimientos</h2>
+        <p class="section-desc">
+          Conocimientos adicionales adquiridos en mi formación
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">Bs</div>
+            <h3>Cajero Bancario (Formación teórica)</h3>
+            <p>
+              Conocimientos teóricos en manejo de caja, arqueo, atención al
+              cliente y procesos de cobros y pagos, adquiridos en el marco de mi
+              formación académica.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">📊</div>
+            <h3>Apoyo Contable y Administrativo</h3>
+            <p>
+              Asistencia en registros contables, control documental y soporte
+              operativo respaldado por 200 horas de pasantía contable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       7. SECCIÓN CONTACTO Y ENVÍO DE CV A GOOGLE SHEETS + DRIVE
+       ========================================================= -->
+    <section id="contacto">
+      <div class="container reveal">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-desc">
+          Envíame un mensaje o adjunta tu hoja de vida / propuesta
+        </p>
+
+        <div class="contact-grid">
+          <!-- Datos directos de tu CV -->
+          <div class="card">
+            <h3>Información de Contacto</h3>
+            <div class="contact-info-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Teléfono / WhatsApp</strong><br />
+                <a href="tel:76233420">76233420</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>Correo Electrónico</strong><br />
+                <a href="mailto:Condorijhovanna45@gmail.com"
+                  >Condorijhovanna45@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">🎓</div>
+              <div>
+                <strong>Institución</strong><br />
+                Universidad Católica Boliviana
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario conectado a Google Apps Script -->
+          <div class="card">
+            <h3>Envíame un mensaje</h3>
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-control"
+                  placeholder="Escribe tu nombre"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="correo">Correo electrónico *</label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  class="form-control"
+                  placeholder="tucorreo@ejemplo.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje *</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Escribe tu mensaje aquí..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="archivoCV"
+                  >Subir hoja de vida o archivo (opcional, cualquier
+                  formato)</label
+                >
+                <input
+                  type="file"
+                  id="archivoCV"
+                  name="archivoCV"
+                  class="form-control"
+                />
+                <span class="file-hint"
+                  >Se guardará automáticamente en Google Drive y su enlace
+                  aparecerá en la hoja de Google. (Máx. 10 MB)</span
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="submitBtn"
+                style="width: 100%"
+              >
+                Enviar mensaje
+              </button>
+
+              <div id="formStatus" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       PIE DE PÁGINA
+       ========================================================= -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2026 Jhovanna Choque Condori — Técnico Superior en Contabilidad.
+        </p>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+       JAVASCRIPT: MENÚ MÓVIL, ANIMACIONES Y ENVÍO A GOOGLE SHEETS
+       ========================================================= -->
+    <script>
+      // ---------------------------------------------------------
+      // 1. PEGA AQUÍ LA URL DE TU APLICACIÓN WEB DE GOOGLE APPS SCRIPT
+      // ---------------------------------------------------------
+      const SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbzIgOVWtzNsTbNyIg88xkNRkw6R34NPXJl-W0y-hW5uIvWZ-Atz0Ln1cp2rnNDJgX86wg/exec";
+
+      // ---------------------------------------------------------
+      // 2. MENÚ RESPONSIVO QUE SE ABRE Y CIERRA EN CELULAR
+      // ---------------------------------------------------------
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const navItems = document.querySelectorAll(".nav-links a");
+
+      // Abrir/cerrar menú al presionar el botón hamburguesa
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Cerrar el menú automáticamente al hacer clic en cualquier enlace en celular
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // ---------------------------------------------------------
+      // 3. ANIMACIONES SUAVES AL BAJAR (SCROLL REVEAL)
+      // ---------------------------------------------------------
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+
+      // ---------------------------------------------------------
+      // 4. VALIDACIÓN Y ENVÍO DEL FORMULARIO + ARCHIVO A GOOGLE
+      // ---------------------------------------------------------
+      const contactForm = document.getElementById("contactForm");
+      const formStatus = document.getElementById("formStatus");
+      const submitBtn = document.getElementById("submitBtn");
+
+      // Función auxiliar para convertir el archivo subido a Base64
+      function leerArchivoComoBase64(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            // Quitamos el encabezado "data:tipo/archivo;base64," para enviar solo los datos puros
+            const base64Data = reader.result.split(",")[1];
+            resolve({
+              fileName: file.name,
+              mimeType: file.type || "application/octet-stream",
+              base64: base64Data,
+            });
+          };
+          reader.onerror = (error) => reject(error);
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function mostrarEstado(mensaje, tipo) {
+        formStatus.textContent = mensaje;
+        formStatus.className = "form-status " + tipo;
+      }
+
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
+        const fileInput = document.getElementById("archivoCV");
+        const archivo = fileInput.files[0];
+
+        // Validación de campos obligatorios
+        if (!nombre || !correo || !mensaje) {
+          mostrarEstado(
+            "Por favor, completa todos los campos obligatorios (*).",
+            "error",
+          );
+          return;
+        }
+
+        // Validación de formato de correo electrónico
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(correo)) {
+          mostrarEstado(
+            "Por favor, ingresa un correo electrónico válido.",
+            "error",
+          );
+          return;
+        }
+
+        // Validación de tamaño de archivo (máximo 10 MB para evitar límites de Apps Script)
+        if (archivo && archivo.size > 10 * 1024 * 1024) {
+          mostrarEstado(
+            "El archivo es muy pesado. El tamaño máximo permitido es 10 MB.",
+            "error",
+          );
+          return;
+        }
+
+        // Verificar si el estudiante ya pegó su URL de Apps Script
+        if (
+          SCRIPT_URL === "PEGA_AQUI_TU_URL_DE_GOOGLE_APPS_SCRIPT" ||
+          !SCRIPT_URL.startsWith("https://")
+        ) {
+          mostrarEstado(
+            "Falta configurar la URL de Google Apps Script en el código (const SCRIPT_URL).",
+            "error",
+          );
+          return;
+        }
+
+        // Deshabilitar botón mientras se envía
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+        mostrarEstado(
+          "Enviando mensaje y procesando archivo, por favor espera...",
+          "loading",
+        );
+
+        try {
+          // Preparamos el paquete de datos
+          const payload = {
+            nombre: nombre,
+            correo: correo,
+            mensaje: mensaje,
+            archivo: null,
+          };
+
+          // Si el usuario adjuntó un archivo (hoja de vida u otro), lo convertimos
+          if (archivo) {
+            payload.archivo = await leerArchivoComoBase64(archivo);
+          }
+
+          // Enviamos los datos a Google Apps Script usando fetch
+          // Nota: usamos text/plain para evitar bloqueos CORS de preflight en navegadores
+          await fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          // Mostrar mensaje de éxito solicitado
+          mostrarEstado("¡Mensaje enviado!", "success");
+          contactForm.reset();
+        } catch (error) {
+          console.error("Error al enviar:", error);
+          mostrarEstado(
+            "Ocurrió un error al enviar el mensaje. Inténtalo nuevamente.",
+            "error",
+          );
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Enviar mensaje";
+        }
+      });
+    </script>
+  </body>
+</html>
